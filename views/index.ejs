@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Project by Kartik Gupta</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            background: linear-gradient(360deg, rgb(50,50,50), rgb(120,120,120));
+            display: flex;
+            text-align: center;
+            color: white;
+            height: 5rem;
+        }
+        nav h2{
+            line-height: 5rem;
+            margin-left: 4rem;
+        }
+        nav p{
+            line-height: 5.2rem;
+            margin-left: 2rem;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 2rem auto;
+            gap: 0.5rem;
+        }
+        form input,
+        form select,
+        form button{
+            height: 2.5rem;
+            border-radius: 6px;
+            border: 1px solid grey;
+        }
+        form button{
+            cursor: pointer;
+            background: linear-gradient(360deg, rgb(50,50,50), rgb(120,120,120));
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>Calculator - </h2>
+        <p>EJS - EXPRESS JS</p>
+    </nav>
+    
+    <form action="/calculate" method="POST" onsubmit="onSubmit">
+        <label for="no1">Enter your first number</label>
+        <input type="number" name="no1" id="no1">
+        <label for="operator">Enter the action you want to perform</label>
+        <select name="operator" id="operator">
+            <option value="">-Select-</option>
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+        <label for="no2">Enter your second number</label>
+        <input type="number" name="no2" id="no2">
+        <button type="submit">Calculate</button>
+    </form>
+
+
+
+</body>
+</html>
